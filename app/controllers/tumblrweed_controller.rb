@@ -3,6 +3,7 @@ class TumblrweedController < ApplicationController
   def index
   end
 
+
   def show
     @key = Tumblrweed::REST::Client.new Rails.application.secret.tumblr_keys,
       Rails.application.secret.consumer_key
@@ -22,4 +23,5 @@ class TumblrweedController < ApplicationController
 
     # @my_client.posts(@input)
   end
+
 end
